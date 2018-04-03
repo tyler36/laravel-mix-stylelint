@@ -1,0 +1,17 @@
+{
+  "name": "laravel-mix-stylelint",
+  "version": "0.2.0",
+  "description": "A quick laravel-mix plugin for adding stylelint support",
+  "main": "index.js",
+  "author": "tyler36 <s.hendrix@iqnet.co.jp>",
+  "license": "MIT",
+  "keywords": ["laravel", "laravel mix", "mix", "stylelint"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyler36/laravel-mix-stylelint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tyler36/laravel-mix-stylelint/issues"
+  },
+  "homepage": "https://github.com/tyler36/laravel-mix-stylelint#readme"
+}
