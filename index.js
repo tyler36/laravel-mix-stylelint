@@ -2,7 +2,6 @@
 
 let mix = require( 'laravel-mix' );
 const path = require( 'path' );
-let StyleLintPlugin = require( 'stylelint-webpack-plugin' );
 
 /**
  * Lint stylesheets via ESLINT
@@ -57,6 +56,8 @@ class StylelintMixin {
      * @return {Array|Object}   Plugin
      */
     webpackPlugins() {
+        let StyleLintPlugin = require( 'stylelint-webpack-plugin' );
+        
         return new StyleLintPlugin( this.config );
     }
 }
