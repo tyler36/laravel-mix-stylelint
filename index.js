@@ -28,6 +28,7 @@ class StylelintMixin {
         return [
             'stylelint',
             'stylelint-webpack-plugin',
+            'postcss-scss'
         ];
     }
 
@@ -39,12 +40,12 @@ class StylelintMixin {
      */
     register( settings ) {
         let defaults = {
-            configFile:  path.join( __dirname, '../../.stylelintrc.js' ),
-            context:     './resources',
-            failOnError: false,
-            files:       ['**/*.scss', '**/*.vue', '**/*.blade.php'],
-            quiet:       false,
-            syntax:      'scss',
+            configFile:   path.join( __dirname, '../../.stylelintrc.js' ),
+            context:      './resources',
+            failOnError:  false,
+            files:        ['**/*.scss', '**/*.vue', '**/*.blade.php'],
+            quiet:        false,
+            customSyntax: 'postcss-scss',
         };
 
         this.config = Object.assign( defaults, settings );
@@ -57,7 +58,7 @@ class StylelintMixin {
      */
     webpackPlugins() {
         let StyleLintPlugin = require( 'stylelint-webpack-plugin' );
-        
+
         return new StyleLintPlugin( this.config );
     }
 }
